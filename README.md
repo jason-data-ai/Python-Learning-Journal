@@ -5,5 +5,7 @@
 
 ## 📚 목차 (자동 생성)
 
-- [Day 1 - Number Operations in Python](01_python_math_basics/day1_number_operations.md)
-- [📘 Day 2 - Conditionals (if / elif / else) & Logic Operators](day2_conditionals/day2_conditionals.md)
+-   [Day 1 - Number Operations in Python](01_python_math_basics/day1_number_operations.md)
+-   [📘 Day 2 - Conditionals (if / elif / else) & Logic Operators](day2_conditionals/day2_conditionals.md)
+-   [🔁 Day 3 – 반복문 완전 체득 정리](day3_Loops/Day3_loops_summary.md)
+-   [📚 Day 4 – 함수 완전 체득 정리](day4_Function/Day4_functions_summary.md)
