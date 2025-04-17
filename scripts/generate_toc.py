@@ -1,15 +1,28 @@
 import os
 
+import re
+
+
+def extract_day_number(path):
+    match = re.search(r"day(\d+(?:\.\d+)?)", path)
+    if match:
+        return float(match.group(1))
+    return float("inf")
+
 
 def find_day_markdown_files():
     md_files = []
     for root, dirs, files in os.walk("."):
+        # ✅ Checkpoints 폴더는 탐색 대상에서 제거
+        dirs[:] = [d for d in dirs if d != ".ipynb_checkpoints"]
+
         for file in files:
             if file.endswith(".md") and file != "README.md":
                 full_path = os.path.join(root, file)
                 relative_path = os.path.relpath(full_path, ".")
                 md_files.append(relative_path)
-    return sorted(md_files)
+    # return sorted(md_files)
+    return sorted(md_files, key=extract_day_number)
 
 
 def extract_title(file_path):
