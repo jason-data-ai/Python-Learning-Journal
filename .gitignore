@@ -1,8 +1,22 @@
-# 캐시/가상환경/숨김 파일 무시
+# Python 캐시 및 컴파일 결과 무시
 __pycache__/
+*.py[cod]
+*.so
+
+# Jupyter 체크포인트 무시
 .ipynb_checkpoints/
+
+# macOS 시스템 파일 무시
 .DS_Store
-*.pyc
+
+# VS Code 설정 파일 (선택)
+.vscode/
 
 # 가상환경 무시
+# (pyenv-venv은 ~/.pyenv 아래 관리되므로 로컬 디렉토리에는 없음)
+# 만약 별도 디렉토리에 만든다면 아래처럼 예시 추가
+.venv/
 venv/
+
+# pip 패키지 정보 파일 무시 (선택)
+pip-log.txt
